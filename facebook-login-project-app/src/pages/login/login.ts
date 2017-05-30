@@ -52,7 +52,7 @@ export class LoginPage {
         let code = json.code;
         let data = json.data;
         if(code == CodesHelper.OK_CODE) {
-            SessionHelper.setLocalStorageField('token', data.token.token);
+            SessionHelper.setLocalStorageField('token', data.token);
             this._sessionService.setSession(data.user);
             this.navigateToHome();
         }else{
